@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+    /* ### Primary */
+
+ --light-cyan: hsl(193, 38%, 86%);
+ --neon-green: hsl(150, 100%, 66%);
+
+/* ### Neutral */
+
+ --grayish-blue: hsl(217, 19%, 38%);
+ --dark-grayish-blue: hsl(217, 19%, 24%);
+ --dark-blue: hsl(218, 23%, 16%);
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    font-family: "Manrope";
+}
+
+body{
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: var(--dark-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 40rem;
+    border-radius: 10px;
+    padding: 2.5rem 2rem 0 2rem;
+}
+
+.advice-part .advice-id{
+    color: var(--neon-green);
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.advice-part .advice{
+    color: var(--light-cyan);
+    text-align: center;
+    margin-top: 1.7rem;
+    position: relative;
+    font-size: 1.1em;
+    top: 0;
+}
+
+#desktop-divider{
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 700px){
+    #desktop-divider{
+        display: none;
+    }
+}
+
+.btn{
+    background: url("images/icon-dice.svg") no-repeat;
+    background-position: center;
+    background-color: var(--neon-green);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: 0.1s;
+    position: relative;
+    top: 1.3rem;
+}
+.btn:hover{
+    -webkit-box-shadow: 0px 0px 18px 3px var(--neon-green); 
+    box-shadow: 0px 0px 18px 3px var(--neon-green);
+}
+
+#mobile-divider{
+    display: none;
+    margin-top: 1.5rem;
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 700px){
+    #mobile-divider{
+        display: inline-block;
+    }
+}
+
+
+.attribution{
+    color: white;
+    font-size: 0.8em;
+    position: relative;
+    top: 3rem;
+    text-align: center;
+}
+.attribution a{
+    color: var(--neon-green);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+.attribution a:hover{
+    font-size: 1.1em;
+    text-decoration: underline;
+}
